@@ -1,3 +1,104 @@
+## Welcome to our project on reactjs( Frontend )
+
+## Contributors
+
+-- Shubham Prajapati
+-- Sahil Yadav
+-- Anusha Mk
+
+## Mentor
+
+-- Vishal Patil Sir . A very special thanks to our mentor Vishal Patil sir for always been there to help us whenever we needed his guidance. Because of his guidance and provided path, we were able to complete the project.
+
+## Node version and npm version
+
+This can be seen by typing "node -v" in the terminal
+-- node -v or node -version
+We have worked on version v16.14.1
+
+-- npm -v or npm -version
+We have worked on 8.5.0
+
+## Brief about the project
+
+In this project, we are making a simple login page where the user is expected to enter the email along with the password to access the login page. Futher login page, there is an upload page which accepts only Excel file and the upload button and upload page are designed in a way that they only select Excel files from the system. Further, once the file is being selected by the user, the name of the excel file is displayed and the predefined set of processing functions that are supposed to be done on the uploaded excel file gets executed and the user is shown the results. In all these functions, the user is logged in to all the functions. The user don't have to login at each step.
+
+### Packages installed and imported for the project
+
+It all starts with the installation of the node in the system and then configuring it with the Vscode and along with node, the reactjs will automativcally gets installed in Vscode.
+
+-- npx i create-react-app appname
+The above command will help to create a react app
+
+-- cd my-app
+-- npm start
+These commands are used to initialize the project of reactjs and it will start the server with the following command.
+When the npm start command is used, then it initialize react, react-dom, and react-scripts
+-- http://localhost:3000/
+This is the local host where the created app will be displayed.
+
+-- npm uninstall -g create-react-app
+The above command can be used to uninstall the undesired app from running.
+
+-- npm install --save bootstrap
+This is used to install bootstrap in the app.
+
+-- npm install reactstrap react react-dom
+This is used to install the reactstrap in the application.
+
+-- npm install react-router-dom
+React Router DOM is an npm package that enables you to implement dynamic routing in a web app. It allows you to display pages and allow users to navigate them.
+
+-- import React from "react"
+
+-- import { BrowserRouter as Router, Route, Routes } from "react-router-dom".
+This is used after installing the react-router-dom package.
+
+-- import \* as XLSX from "xlsx";
+It is used to access the excel file for the project.
+
+-- import reportWebVitals from "./reportWebVitals"
+This function is fired when the final values for any of the metrics have finished calculating on the page. We can use it to log any of the results to the console or send to a particular endpoint.
+
+## Extensions used for smooth functioning of Code and running of reactjs
+
+-- Auto Close Tag
+-- Babel Javascript
+-- Code Runner
+-- Bracket Pair Coloniser
+-- Auto Rename Tag
+-- VS Code ES7 React/Redux/React-Native/JS snippets
+-- ESLint
+-- VS Code JavaScript (ES6) snippets
+-- Line Server
+-- Prettier Formatter for Visual Studio Code
+-- vscode-icons
+-- yarn
+
+### "axios.js"
+
+This section is mainly used to send asynchronous HTTP requests to REST endpoints. This library is very useful to perform CRUD operations. This popular library is used to communicate with the backend. Axios supports the Promise API, native to JS ES6.
+
+### Page\Login
+
+This section accepts the frontend user to access the first (Login) Page with the credentials Email and Password and to further contact the webpages of the project. This is the first page of the project.
+
+### Uploadxl
+
+This section is used to accept the Excel file provided by the user. This page has been restricted to accept only excel files and displays it to user with its name for the clarity. Further, the page is used to process the uploaded excel file and provide the user with the output so that the user can see the processed file after uploading.
+
+### Nomatch
+
+This is the 404 error page created to be displayed to the user whenever the user tries to access the unauthorized or not specified stuffs and pages.
+
+### App.js
+
+This is the main page which is used to interconnect all the required important files which each other. This is the page where the other pages like "Login", "Uploadxl", "Nomatch" files are imported and used to deploy. This page is created with the folowing functionality.
+-- First, it will import all the other files, namely, Login, Uploadxl and Nomatch which are relevant for our project.
+-- First, it will open the Login page and when the entered details criteria is matched, then it will move to uploadxl page which will display the uploading button.
+-- After, that when the file is uploaded, then it will perform the pre defined sets of instructions on the uploaded file and will be displayed to the user.
+-- It the user tries to access or provide any instructions that are not in the bound of this project, then that instructions will lead the user to the "404 error page".
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

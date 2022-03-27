@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Uploadxl from "./Uploadxl/upxl/uploadxl";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./Page/Login/login";
+import Nomatch from "./Uploadxl/upxl/Nomatch";
+import { Redirect } from "react-router";
+import { Navigate } from "react-router-dom";
+import { useState } from "react";
+import server from "./server";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import {Router, Route, Link, browserHistory, IndexRoute } from "react-router";
+
+// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
+class App extends React.Component {
+  state = {
+    isLog: false,
+  };
+
+  handleLogin = (isLog) => this.setState({ isLog });
+  render() {
+    const { isLog } = this.state;
+
+    return (
+      <div>
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+
+          <Route
+            exact
+            path="/"
+            render={() =>
+              !isLog ? <Login isLog={this.handleLogin} /> : <Uploadxl />
+            }
+          ></Route>
+
+          <Route exact path="/upload" element={<Uploadxl />} />
+          <Route path="*" element={<Nomatch />} />
+        </Routes>
+        <Redirect
+          from
+          exact
+          path="/Login"
+          to={{
+            pathname: "/upload",
+          }}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
